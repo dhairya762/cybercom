@@ -1,0 +1,19 @@
+My name is Dhairya Bhaveshkumar Patel.
+Today is my first day on Git.So I learn how to make account in GitHub and how to make repositeory in GitHub.
+Then after I learned how to generate SSH key.
+Then after how to clone repository in project directory.
+How to make branch in GitHub.
+How to mearge branch and main file.
+Then after I learned some comand of Git:
+$mkdir<directory name>
+$cd <directory name>
+$git remote -v
+$git fetch origin
+$git checkout -b <branch name> origin/main
+$git status
+$git add <file name>
+$git commit -m "message"
+$git push origin <branch name>
+$git checkout main
+$git mearge --no-ff origin/<branch name>
+
