@@ -1,0 +1,4 @@
+Today I learnd some basics of JS.
+How to cal  externall Js file into htmal code and how to apply inline JS in html code.
+After that I have done all the practice Question given in the google drive.
+That's all for today from my side.
