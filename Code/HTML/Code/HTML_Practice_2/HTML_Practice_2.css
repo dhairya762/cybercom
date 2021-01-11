@@ -1,0 +1,95 @@
+.A{
+	height: 380px;
+	width: 250px;
+	border:none;
+	display: inline-block;
+    color:black;
+    text-align: center;
+    box-shadow: 5px 10px 18px #888888;
+    position: relative;
+    margin:20px;
+    padding: 10px;
+}
+.B{
+	height: 380px;
+	width: 250px;
+	border: none;
+	display: inline-block;
+    color:black;
+	outline-width: 2px;
+    text-align: center;
+    box-shadow: 5px 10px 18px #888888;
+    position: relative;
+    margin:20px;
+    padding: 10px;
+}
+.C{
+	height: 380px;
+	width: 250px;
+	border: none;
+	display: inline-block;
+    color:black;
+	outline-width: 2px;
+    text-align: center; 
+    box-shadow: 5px 10px 18px #888888;
+    position: relative;
+    margin:20px;
+    padding: 10px;
+}
+
+.M
+{ 
+	padding-left:  19.5%;
+    padding-top: 1%;
+    align-items: center;
+    align-content: center;
+}
+body{
+	margin: 0;
+}
+.A .p1
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;              
+    top: 50%;    
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    color:white;                    
+}
+.B .p1
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;              
+    top: 50%;                         
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+}
+.C .p1
+{ 
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;              
+    top: 50%;                         
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+}
+.caption{
+    bottom:0;
+    position: absolute;
+}
+img
+{   
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+hr{
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
