@@ -4,10 +4,9 @@
 	border: 5px solid red;
 	display: inline-block;
 	background-color: black;
-    color:black;
+    color:rgb(212, 27, 27);
     text-align: center;
-
-position: relative
+    position: relative
 
 }
 .B
@@ -80,7 +79,7 @@ body
     margin: 0;
     position: absolute;              
     top: 50%;                         
-     left: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color:white;
 }
