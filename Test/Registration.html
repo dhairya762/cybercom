@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    
+    <center>
+        <h1>Register</h1>
+        <form method="POST">
+        <div class="container">
+          
+          <input type="text" placeholder="Name" name="name" id="name" required><br><br>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required><br><br>
+           <input type="password" placeholder="Enter Password" name="pass" id="pass" required><br><br>
+          <input type="password" placeholder="Confirm Password" name="confirmpass" id="confirmpass" required>
+          <br><br>
+          <select name="Select City" id="city">
+            <option value="jamnagar" selected>Jamnagar</option>
+            <option value="Mumbai">Rajkot</option>
+            <option value="Bhopal">Suurat</option>
+            <option value="Udaypur">Ahmedabad</option>
+          </select>
+          <br><br>
+
+          <select name="Select State" id="state" style="margin-top: 1;">
+            <option value="gujarat" selected>Gujarat</option>
+            <option value="maharastra">Maharastra</option>
+            <option value="madhyapradesh">MadhyaPradesh</option>
+            <option value="rajasthan">Rajasthan</option>
+          </select>
+          <br><br>
+
+          <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">Terms & Coditions
+          <br><br>
+          <button type="submit" class="registerbtn">Register</button>
+        </div>
+      </form>
+    </center>
+</body>
+</html>
