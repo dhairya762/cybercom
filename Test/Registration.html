@@ -10,7 +10,7 @@
     
     <center>
         <h1>Register</h1>
-        <form method="POST">
+        <form method="POST" target="_blank" name="form">
         <div class="container">
           
           <input type="text" placeholder="Name" name="name" id="name" required><br><br>
@@ -26,7 +26,7 @@
           </select>
           <br><br>
 
-          <select name="Select State" id="state" style="margin-top: 1;">
+          <select name="Select State" id="state">
             <option value="gujarat" selected>Gujarat</option>
             <option value="maharastra">Maharastra</option>
             <option value="madhyapradesh">MadhyaPradesh</option>
@@ -34,11 +34,14 @@
           </select>
           <br><br>
 
-          <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">Terms & Coditions
+          <input type="checkbox" name="terms" id="terms" required>Terms & Coditions
           <br><br>
           <button type="submit" class="registerbtn">Register</button>
+          
+          
         </div>
       </form>
     </center>
+    <script src="Registration.js"></script>
 </body>
 </html>

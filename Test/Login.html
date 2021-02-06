@@ -10,15 +10,16 @@
     <h1><center>Login</center></h1>
     
     <center>
-        <form name = "form" onsubmit="return validateForm()" method ="post" target="_blank" >
-            <input type="text" name="username" id="username" placeholder="User Name"><br><br>
-            <input type="password" name="password" id="password" placeholder="Password" ><br><br>
+        <form name = "form" method ="post" target="_blank" >
+            <input type="text" name="username" id="username" placeholder="User Name" required><br><br>
+            <input type="password" name="password" id="password" placeholder="Password" required><br><br>
             <input type="submit" value="Login"formaction="Dashboard.html"><br>
             <h4>Or</h4><br>
-            <input type="submit" value="Register" formaction="Registration.html">         
+            <a href="Registration.html"><input type="submit" value="Register"formaction="Registration.html"></a>
             
         </form>
     
     </center>
+    <script src="Login.js"></script>
  </body>
 </html>
