@@ -1,17 +1,23 @@
-let username=document.querySelector("username");
-console.log(username);
-let password=document.querySelector("password");
-console.log(password);
-
-/*
-    var obj1 = document.["form"]["username"].value;
-    var obj2= document.["form"]["password"].value;
-    if (x == "") 
-    {
+function validate()
+{
     
-        alert("Name must be filled out");
-        return false;
+
+var uname = document.getElementById("username").value;
+var password  = document.getElementById("password").value;
+var a=JSON.parse(localStorage.getItem("admin"));
+
+if(a.name!=uname)
+{
+        alert("Invalid User");
+        return true;
     }
-    console.log(obj1);
-    console.log(obj2);
-*/
+    else if(a.password1!=password)
+    {
+        alert("Invalid User");
+        return true;
+    }
+    else 
+    {
+        alert("Valid User");
+    }
+}

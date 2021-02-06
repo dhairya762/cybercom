@@ -1,17 +1,19 @@
+function validate(){
 
-var admin={
-	name:document.form.name.value,
-	email:document.form.email.value,
-	pasword:document.form.pass.value,
-	city:document.form.city.value,
-	state:document.form.state.value
-};
-console.log(admin);
-var pass1 = document.form.pass.value;
-var pass2 = document.form.confirmpass.value;
-if(pass1!==pass2)
-{
-    alert("Halti na thav");
-}
-
-localStorage.setItem('admin',JSON.stringify(admin));
+    var pass1=document.form.password1.value;
+    var pass2=document.form.password2.value;
+    
+    if(pass1!=pass2){
+        alert("please enter the correct password");
+        return false;
+    }
+    
+    var admin={
+        name:document.form.name.value,
+        email:document.form.email.value,
+        password1:document.form.password1.value,
+        password2:document.form.password2.value,
+        city:document.form.city.value,
+        state:document.form.state.value,
+    }
+localStorage.setItem('admin',JSON.stringify(admin));}
