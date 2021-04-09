@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+
+<title>Deshboard</title>
 </head>
-<body >
-    <div style="background-color: red; width: 150px;">
-        <center>
-            <table style="border: 1px solid black;">
-                <td>
-                    
-                </td>
-            </table>
-        </center>
-
+<body style="height: 50px; width: auto;">
+	<center>
+	<h1>Dashboard</h1>
+	
+	   <div style="display: inline-block; position: relative; background:pink;width: 440px;">
+		<h2>Hello, <script>var a=JSON.parse(localStorage.getItem("admin"));document.write(a.name);console.log(a.name);</script></h2><br><br>
+        <ul>
+            <li><a href="Dashboard.html" style="width: 100%;"><h2>DashBoard</h2></a><br><br></li>
+            <li><a href="Users.html" style="width: 100%;"><h2>Users</h2></a><br><br></li>
+            <li><a href="LoginSession.html" style="width: 100%;"><h2>Loggin session</a></h2><br><br></li>
+            <li><a href="Login.html" style="width: 100%;"><h2>Logout</a></h2><br></li>
+        </ul>
+		
+		
+        
+        
+      </div>
+      <div style="display: inline-block;width: 450px; margin: 1%;">
+        <div style="position: relative;">
+            <div style="display: inline-block ; width: 150px; height:175px; position: relative; background: red;">
+            <h4>User less then 18 years</h4>
+            <h5>12 users</h5>
+          </div>
+          <div style="display: inline-block;width: 150px;height:175px; position: relative; background: green;">
+              <h4>User between 18-50 Years</h4>
+              <h5>30 users</h5>
+          </div>
+          <div style="height:175px;width: 150px; position: relative; background-color: yellow;">
+              <h4>User greater than 50 Years</h4>
+              <h5>25 users</h5>
+          </div>
+      </div>
+      
+      <h4>Today is 'ABC' Birthday</h4>
     </div>
-    <div>
 
-    </div>
-    
+<script src="Deshboard.js"></script>
+
+</center>
+
 </body>
 </html>
+

@@ -1,126 +1,47 @@
-<main>
-    <div class="mw8 center pv4 ph3" id="dashboard">
-      <section class="flex-m flex-l nl3-m nr3-m nl3-l nr3-l">
-        <nav class="w-100 w-25-m w-25-l mb4 mb0-l ph3-m ph3-l">
-          <header class="mb2">
-            <i class="material-icons f2 black-70">dashboard</i>
-          </header>
-          <form class="mb4 w-100 w-70-m w-80-l">
-            <input type="text" placeholder="Search" class="input-reset ba b--black-20 pa1 br2 f5 w-100" />
-          </form>
-          <h2 class="ttu mt0 mb2 f6 fw5 silver">Vector</h2>
-          <ul class="list pl0 mt0 mb4">
-            <li class="mb2">
-              <a href="#" class="block link dim blue">Overview</a>
-            </li>
-            <li class="mb2">
-              <a href="#" class="block link dim blue">Servers History</a>
-            </li>
-            <li class="mb2">
-              <a href="#" class="block link dim blue">SONIC</a>
-            </li>
-            <li>
-              <a href="#" class="block link dim blue">Infrastructures</a>
-            </li>
-          </ul>
-          <h2 class="ttu mt0 mb2 f6 fw5 silver">More</h2>
-          <ul class="list pl0 mt0 mb2">
-            <li class="mb2">
-              <a href="#" class="block link dim blue">Intelligence Center</a>
-            </li>
-            <li class="mb2">
-              <a href="#" class="block link dim blue">Reports</a>
-            </li>
-            <li class="mb2">
-              <a href="#" class="block link dim blue">Dark UI</a>
-            </li>
-            <li>
-              <a href="#" class="block link dim blue">Details</a>
-            </li>
-          </ul>
-        </nav>
-        <article class="w-100 w-75-m w-75-l ph3-m ph3-l">
-          <header class="mb3">
-            <h2 class="ttu mt0 mb1 f6 fw5 silver">Status</h2>
-            <h1 class="fw3 dark-gray mt0 mb0">PROTECTED</h1>
-          </header>
-          <hr class="o-20" />
-          <div class="flex-m flex-l flex-wrap items-center justify-between nl3 nr3 pt4 mb4">
-            <div class="w-100 w-50-m w-33-l ph3 tc mb4 mb0-l">
-              <div class="w-50 w-50-m w-75-l center">
-                <doughnut :labels="newVsReturning.labels" :data="newVsReturning.data"></doughnut>
-              </div>
-              <h3 class="mt3 mb1 f6 fw5 silver">Traffic</h3>
-              <h4 class="dark-gray f3 fw3 mv0">Inbound vs. Outboud</h4>
-            </div>
-            <div class="w-100 w-50-m w-33-l ph3 tc mb4 mb0-l">
-              <div class="w-50 w-50-m w-75-l center">
-                <doughnut :labels="newVsRecurring.labels" :data="newVsRecurring.data"></doughnut>
-              </div>
-              <h3 class="mt3 mb1 f6 fw5 silver">Network</h3>
-              <h4 class="dark-gray f3 fw3 mv0">Infrastructures</h4>
-            </div>
-            <div class="w-100 w-50-m w-33-l ph3 tc mb4 mb0-l">
-              <div class="w-50 w-50-m w-75-l center">
-                <doughnut :labels="directVsReferrals.labels" :data="directVsReferrals.data"></doughnut>
-              </div>
-              <h3 class="mt3 mb1 f6 fw5 silver">Threat Analysis</h3>
-              <h4 class="dark-gray f3 fw3 mv0">Sonic Scanning</h4>
-            </div>
-          </div>
-          <div class="divide tc relative">
-            <h5 class="fw4 ttu mv0 dib bg-white ph3">Quick Stats</h5>
-          </div>
-          <div class="flex flex-wrap mt3 nl3 nr3">
-            <div class="w-50 w-25-l mb4 mb0-l relative flex flex-column ph3">
-              <sparkline title="Stations" class="bg-green" value="20"></sparkline>
-            </div>
-            <div class="w-50 w-25-l mb4 mb0-l relative flex flex-column ph3">
-              <sparkline title="Criticals" class="bg-red" value="758"></sparkline>
-            </div>
-            <div class="w-50 w-25-l mb4 mb0-l relative flex flex-column ph3">
-              <sparkline title="Users" class="bg-purple" value="20"></sparkline>
-            </div>
-            <div class="w-50 w-25-l mb4 mb0-l relative flex flex-column ph3">
-              <sparkline title="Files" class="bg-blue" value="75,800"></sparkline>
-            </div>
-          </div>
-          <hr class="o-20 mt4" />
-          <div class="flex flex-wrap pt3 nl3 nr3">
-            <div class="w-100 w-50-l ph3 mb3 mb0-l">
-              <div class="bt bl br b--black-10 br2">
-                <div class="pa3 bb b--black-10">
-                  <h4 class="mv0">Traffic Location</h4>
-                </div>
-                <metric-list-item v-for="(country, index) in countryData" :key="index" :show-bar="country.showBar" :name="country.name" :value="country.value">
-                </metric-list-item>
-              </div>
-              <a href="#" class="no-underline fw5 mt3 br2 ph3 pv2 dib ba b--blue blue bg-white hover-bg-blue hover-white">All Countries</a>
-            </div>
-            <div class="w-100 w-50-l ph3 mb3 mb0-l">
-              <div class="bt bl br b--black-10 br2">
-                <div class="pa3 bb b--black-10">
-                  <h4 class="mv0">Directory Analysis</h4>
-                </div>
-                <metric-list-item v-for="(page, index) in pageData" :key="index" :show-bar="page.showBar" :name="page.name" :value="page.value">
-                </metric-list-item>
-              </div>
-              <a href="#" class="no-underline fw5 mt3 br2 ph3 pv2 dib ba b--blue blue bg-white hover-bg-blue hover-white">See All</a>
-            </div>
-          </div>
-          <div class="mt4">
-            <div class="w-100 mb3 mb0-l">
-              <div class="bt bl br b--black-10 br2">
-                <div class="pa3 bb b--black-10">
-                  <h4 class="mv0">Devices</h4>
-                </div>
-                <metric-list-item v-for="(device, index) in deviceData" :key="index" :show-bar="device.showBar" :name="device.name" :value="device.value">
-                </metric-list-item>
-              </div>
-              <a href="#" class="no-underline fw5 mt3 br2 ph3 pv2 dib ba b--blue blue bg-white hover-bg-blue hover-white">All Devices</a>
-            </div>
-          </div>
-        </article>
-      </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Add User</title>
+<script type="text/javascript" src="User.js"></script>
+</head>
+<body style="height: 50px; width:auto;">
+	<h1>Add User</h1>
+	<div style="display:inline-block;height: 75px;">
+	   <div style="display: inline-block;position: relative; background:lightblue;">
+		<h2>Hello,[<script>var a=JSON.parse(localStorage.getItem("admin"));document.write(a.name);</script>]</h2><br><br>
+		<a href="Dashboard.html" style="width: 15%;"><h2>DashBoard</h2></a><br>
+		<a href="User.html" style="width: 15%;"><h2>Users</h2></a><br>
+        <a href="LoginSession.html" style="width: 15%;"><h2>Loggin session</a></h2><br>
+        <a href="Login.html" style="width: 15%;"><h2>Logout</a></h2><br>
+      </div>
+      <h2>Add User</h2>
+      <div style="display:inline-block;height: 75px;">
+        <div style="display: inline-block;position: relative; background:lightblue;">
+        <input type="text" name="name" id="name" placeholder="Name.."required>
+        <input type="text" name="email" id="email" placeholder="Email Id.."required>
+       <input type="password" name="password" id ="password" placeholder="Password.."required>
+       <input type="date" name="date" id ="date" placeholder="Birthdate.."required>
+       <input type="submit" name="submit" value="Add User" onclick="return validation();">
+      </div>
+      <table border="1px" width="50px">
+        <tr>
+        <th>Name</th><th>Email</th><th>Password</th><th>Birthdate</th><th>Actions</th>
+        </tr>
+        <tr>
+        <td><script>var a=JSON.parse(localStorage.getItem("user"));document.write(a.name);</script></td>
+        <td><script>var a=JSON.parse(localStorage.getItem("user"));document.write(a.email);</script></td>
+        <td><script>var a=JSON.parse(localStorage.getItem("user"));document.write(a.password);</script></td>
+        <td><script>var a=JSON.parse(localStorage.getItem("user"));document.write(a.birthdate);</script></td>
+        <td><button onclick="return update();"><a href="">edit</a></button>&nbsp&nbsp<button onclick=" return deleteItem();"><a href="">delete</a></button></td>
+        </tr>
+      </table>
     </div>
-  </main>
+</div>
+</body>
+</html>
+
+
+
+
+Type a message
